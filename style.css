@@ -80,3 +80,48 @@
     background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
     color: #fafafa;
   }
+
+
+/*Status notification styling*/
+
+  .status{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    height: 1.5em;
+  }
+
+
+/*Emotion state styling*/
+
+  .happy{
+    filter: hue-rotate(30deg) brightness(1.2);
+  }
+
+  .sad{
+    filter: grayscale(100%) brightness(0.6);
+  }
+
+  .sleepy{
+    filter: brightness(0.7) blur(1px);
+    transition: filter 0.3s ease;
+  }
+
+  .overfed {
+    filter: saturate(0.7) brightness(0.85);
+    transform: scale(1.05);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+
+  /* Low stat highlight */
+  .low-stat {
+    color: #ff4d4f;
+    font-weight: bold;
+    animation: blink 0.8s linear infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0.5; }
+  }
+
+
+  

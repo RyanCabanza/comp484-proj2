@@ -13,16 +13,30 @@
   <body>
     <header>
       <h1>
-        This is your Giga Pet
+        Project 2 - Giga Pet
       </h1>
     </header>
 
     <main>
       <section class="pet-image-container">
-        <img class="pet-image" src="https://cdn.glitch.com/3aa98e05-3216-497c-a251-210ae4713a83%2Fhound.jpg?1541715339220">
+        <img class="pet-image" src="images/raya.jpg">
+        <div class="mood-message"></div>
+      </section>
+
+      <section class="pet-switcher">
+        
       </section>
 
       <section class="dashboard">
+
+        <div>Select your pet</div>
+        <div class="pet-switcher">
+          <button class="pet-select" data-pet="raya">Raya</button>
+          <button class="pet-select" data-pet="spotty">Spotty</button>
+          <button class="pet-select" data-pet="casper">Casper</button>
+          <button class="pet-select" data-pet="ziggy">Ziggy</button>
+        </div>
+
         <div>Name: <strong><span class="name"></span></strong></div>
         <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
         <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>

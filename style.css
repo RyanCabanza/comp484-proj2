@@ -81,10 +81,29 @@
     color: #fafafa;
   }
 
+.pet-switcher { 
+  margin: 10px 0; 
+  padding-bottom: 15px;
+}
+
+.pet-switcher .pet-select {
+  margin-right: 8px;
+  padding: 6px 10px;
+  background-color: #1e2835;
+  border-color: #404853;
+  cursor: pointer;
+  color: #fafafa;
+}
 
 /*Status notification styling*/
 
+  .status-box{
+    clear: both;
+    text-align: center;
+  }
+
   .status{
+    display: inline-block;
     transition: opacity 0.5s ease;
     opacity: 0;
     height: 1.5em;
@@ -92,6 +111,34 @@
 
 
 /*Emotion state styling*/
+
+  .mood-message {
+      position: absolute;
+      top: 100px;           
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+      z-index: 10;
+      filter: none !important; /* Ensure message doesn't get affected by mood filters */
+  }
+
+  .mood-message.show {
+    opacity: 1;
+  }
+
+  .happy + .mood-message,
+  .sad + .mood-message {
+    transition: opacity 0.6s ease;
+  }
 
   .happy{
     filter: hue-rotate(30deg) brightness(1.2);
@@ -124,4 +171,4 @@
   }
 
 
-  
+

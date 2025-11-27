@@ -9,7 +9,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     $('.exercise-button').click(clickedExerciseButton);
     $('.sleep-button').click(clickedSleepButton);
   
-    // Clicking a pet button triggers a custom event carrying the new pet
+    // Using .trigger to so that a button triggers a custom event swapping pets
     $('.pet-switcher').on('click', '.pet-select', function () {
       const key = this.dataset.pet;              // "raya" or "spotty" or "casper"
       if (PETS[key]) {

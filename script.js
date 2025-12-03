@@ -96,6 +96,7 @@ $(document).on('pet:switch', function (_evt, newPet) {
     // -------- ACTIONS --------
 
     function clickedTreatButton() {
+      debugger; // <---- use debugger so that dev tools jumps from jQuery file after clicking resume
       // Checks if Raya is too (hungry, tired, or sad) to play
       if (!canPerformAction("eat a treat")) return;
 
@@ -105,7 +106,7 @@ $(document).on('pet:switch', function (_evt, newPet) {
       // Normal boost when pet is within a healthy weight
       if (pet_info.weight < weightLimit) {
 
-        pet_info.happiness += 5;
+        pet_info.hapiness += 5; // <----- BUG: TYPO - happiness missing 'p'
         pet_info.weight += 5;
         pet_info.energy += 3;
 

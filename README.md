@@ -1,2 +1,2 @@
-# COMP 484 - Project 2
+# COMP 484 - Homework 10
 Link: https://ryancabanza.github.io/comp484-proj2/
